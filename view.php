@@ -1,4 +1,5 @@
-<?php   include './includes/header.php';
+<?php   
+include './includes/header.php';
 
 require_once './app/Dbconnection.php';
 $opert = new Operation();
@@ -15,6 +16,7 @@ $opert = new Operation();
              <h2>Registerd Users</h2>
            </div>
            <div class="card-body">
+           <?= isset($_SESSION['Message'])? $opert->showMessage() : ''  ?>
              <table class="table table-bordered">
                <tr>
                 <td style="width:10%">ID</td>
@@ -36,9 +38,9 @@ $opert = new Operation();
                <td>
                <a href="edit.php?eid=<?= $getAllUser->id ?>" class="btn btn-success">Edit</a>
                 <a href="delete.php?did=<?= $getAllUser->id ?>" id="first" class="btn btn-success">Delete</a>
-               </td>           
+               </td>  
                </tr>
-               <?php endwhile;?>
+               <?php endwhile;?>      
              </table>
            </div>
          </div>

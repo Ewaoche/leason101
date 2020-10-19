@@ -8,9 +8,10 @@ if(isset($_GET['did']))
 
     $id =  $_GET['did']; 
     $result = $opert->deleteUser($id);
-    if($result){
-      header("location:view.php");
-    }
+    // if($result)
+    // {
+    //   header("location:view.php");
+    // }
 
   }
   

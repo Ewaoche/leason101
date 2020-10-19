@@ -7,7 +7,8 @@
 
   $result = $opert->runUpdate();
 //   die(var_dump($result));
-  if($result){
+  if($result)
+  {
     header('location:view.php');
   }
 
